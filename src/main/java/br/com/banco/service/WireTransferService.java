@@ -2,7 +2,6 @@ package br.com.banco.service;
 
 import br.com.banco.entity.WireTransfer;
 import br.com.banco.repository.WireTransferRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
@@ -17,8 +16,12 @@ import java.util.List;
 @Service
 public class WireTransferService {
 
-    @Autowired
-    private WireTransferRepository wireTransferRepository;
+    private final WireTransferRepository wireTransferRepository;
+
+    public WireTransferService(WireTransferRepository wireTransferRepository) {
+        this.wireTransferRepository = wireTransferRepository;
+    }
+
 
     public List<WireTransfer> listAllWireTransfer(
             final LocalDate startDate,
