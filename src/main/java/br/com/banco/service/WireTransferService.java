@@ -3,7 +3,6 @@ package br.com.banco.service;
 import br.com.banco.entity.WireTransfer;
 import br.com.banco.repository.WireTransferRepository;
 import org.springframework.data.jpa.domain.Specification;
-import org.springframework.stereotype.Service;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -13,7 +12,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
 public class WireTransferService {
 
     private final WireTransferRepository wireTransferRepository;
