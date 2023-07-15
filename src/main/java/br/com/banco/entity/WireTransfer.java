@@ -31,7 +31,7 @@ public class WireTransfer {
     @Column(name = "tipo", nullable = false)
     private String type;
 
-    @Column(name = "nome_operador_transacao", nullable = false)
+    @Column(name = "nome_operador_transacao")
     private String transactionOperatorName;
 
     @ManyToOne
